@@ -1,4 +1,5 @@
 import LandingPage from "./components/LandingPage"
+import Marquee from "./components/Marquee"
 import Navbar from "./components/Navbar"
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div className="w-full h-screen">
       <Navbar />
       <LandingPage />
+      <Marquee />
     </div>
   )
 }

@@ -2,12 +2,12 @@ import { PiArrowDownLeftThin } from "react-icons/pi";
 
 const LandingPage = () => {
   return (
-    <div className="w-full h-screen bg-gray-100 pt-1">
+    <div data-scroll data-scroll-section data-scroll-speed="-.6" className="w-full h-screen bg-gray-100 pt-1">
       <div className="textstructure mt-32 opacity-[0.86]">
         {["We Create", "Eye-opening", "Presentations"].map((item, index) => (
           <div key={index} className="masker px-15 overflow-hidden">
             <div className="w-fit flex gap-[1vw]">
-                {index === 1 && <div className="w-[9vw] bg-center bg-cover bg-[url('/images/content-image01.jpg')] relative top-[1vw] h-[6vw] rounded-sm bg-red-500"></div>}
+                {index === 1 && <div className="w-[9vw] bg-center bg-cover bg-[url('/images/content-image01.jpg')] relative top-[1vw] h-[6vw] rounded-sm"></div>}
               <h1 className="uppercase text-[9vw] leading-[7vw] font-[foundersGrotesk]">
                 {item}
               </h1>

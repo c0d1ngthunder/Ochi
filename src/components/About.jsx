@@ -1,12 +1,12 @@
 const About = () => {
   return (
-    <div className="w-full pt-20 rounded-tl-3xl rounded-tr-3xl bg-[#CDEA68]">
-      <p className="text-[4vw] leading-[4vw] px-10 pr-30 font-[NeueMonstreal] opacity-[0.9]">
+    <div data-scroll data-scroll-section data-scroll-speed=".1" className="w-full z-50 relative pt-20 rounded-tl-3xl rounded-tr-3xl bg-[#CDEA68]">
+      <p className="text-[4vw] leading-[4vw] px-15 pr-30 font-[NeueMonstreal] opacity-[0.9]">
         Ochi is a strategic presentation agency for forward-thinking businesses
         that need to raise funds, sell products, explain complex ideas, and hire
         great people.
       </p>
-      <div className="flex text-lg border-t-1 w-full pr-[10vw] justify-between border-[#a5b95a] px-10 py-5 mt-10">
+      <div className="flex text-lg border-t-1 w-full pr-[10vw] justify-between border-[#a5b95a] px-15 py-5 mt-10">
         <div>What you can expect:</div>
         <div className="w-1/2 flex justify-between">
           <div className="w-1/2 flex flex-col gap-[2vw]">
@@ -26,7 +26,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="border-[#a5b95a] flex mt-20 w-full px-10 border-t-1 p-10">
+      <div className="border-[#a5b95a] flex mt-20 w-full px-15 border-t-1 p-10">
         <div className="w-1/2">
             <h1 className="text-[4vw] mb-4 opacity-[0.9]">Our Approach:</h1>
             <button className="px-4 opacity-[0.9] flex items-center gap-5 uppercase py-3 bg-black text-white rounded-full">Read More <div className="w-2 h-2 bg-white rounded-full"></div></button>

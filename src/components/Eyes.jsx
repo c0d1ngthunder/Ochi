@@ -14,12 +14,11 @@ const Eyes = () => {
         let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
         setRotate(angle - 180);
-        console.log(rotate);
       });
   });
 
   return (
-    <div className="w-full h-screen">
+    <div data-scroll data-scroll-speed="-.7" className="w-full h-screen">
       <div className="w-full h-full relative bg-[url('/images/Eyes-bg.jpg')] bg-cover bg-center">
         <div className="absolute top-1/2 -translate-x-[50%] -translate-y-[50%] left-1/2 flex gap-10  ">
           <div className="bg-white flex items-center justify-center w-[15vw] h-[15vw] rounded-full">

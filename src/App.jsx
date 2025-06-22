@@ -1,6 +1,8 @@
+import About from "./components/About"
 import LandingPage from "./components/LandingPage"
 import Marquee from "./components/Marquee"
 import Navbar from "./components/Navbar"
+import Eyes from "./components/Eyes"
 
 const App = () => {
   return (
@@ -8,6 +10,8 @@ const App = () => {
       <Navbar />
       <LandingPage />
       <Marquee />
+      <About />
+      <Eyes />
     </div>
   )
 }

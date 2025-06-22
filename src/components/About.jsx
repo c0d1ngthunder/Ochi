@@ -28,10 +28,10 @@ const About = () => {
       </div>
       <div className="border-[#a5b95a] flex mt-20 w-full px-10 border-t-1 p-10">
         <div className="w-1/2">
-            <h1 className="text-[5vw]">Our Approach:</h1>
-            <button className="px-4 flex items-center gap-5 uppercase py-3 bg-black text-white rounded-full">Read More <div className="w-2 h-2 bg-white rounded-full"></div></button>
+            <h1 className="text-[4vw] mb-4 opacity-[0.9]">Our Approach:</h1>
+            <button className="px-4 opacity-[0.9] flex items-center gap-5 uppercase py-3 bg-black text-white rounded-full">Read More <div className="w-2 h-2 bg-white rounded-full"></div></button>
         </div>
-        <div className="w-1/2 h-[70vh] bg-amber-200 rounded-2xl "></div>
+        <div className="w-1/2 h-[70vh] rounded-2xl bg-[url('/images/HomepagePhoto.jpg')] "></div>
       </div>
     </div>
   );

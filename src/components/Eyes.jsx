@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Eyes = () => {
   let [rotate, setRotate] = useState(0);
-  let eyes = useRef(null);
 
   useEffect(() => {
-    if (eyes) {
-      eyes.current.addEventListener("mousemove", (e) => {
+      window.addEventListener("mousemove", (e) => {
         let mouseX = e.clientX;
         let mouseY = e.clientY;
 
@@ -18,12 +16,11 @@ const Eyes = () => {
         setRotate(angle - 180);
         console.log(rotate);
       });
-    }
   });
 
   return (
-    <div ref={eyes} className="w-full h-screen">
-      <div className="w-full h-full relative bg-green-200">
+    <div className="w-full h-screen">
+      <div className="w-full h-full relative bg-[url('/images/Eyes-bg.jpg')] bg-cover bg-center">
         <div className="absolute top-1/2 -translate-x-[50%] -translate-y-[50%] left-1/2 flex gap-10  ">
           <div className="bg-white flex items-center justify-center w-[15vw] h-[15vw] rounded-full">
             <div className="bg-zinc-900 relative w-2/3 h-2/3 rounded-full">

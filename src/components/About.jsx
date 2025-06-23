@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed=".1" className="w-full z-50 relative pt-20 rounded-tl-3xl rounded-tr-3xl bg-[#CDEA68]">
+    <div className="w-full pt-20 rounded-tl-3xl rounded-tr-3xl bg-[#CDEA68]">
       <p className="text-[4vw] leading-[4vw] px-15 pr-30 font-[NeueMonstreal] opacity-[0.9]">
         Ochi is a strategic presentation agency for forward-thinking businesses
         that need to raise funds, sell products, explain complex ideas, and hire

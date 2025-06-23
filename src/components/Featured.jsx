@@ -1,30 +1,101 @@
+import { motion, useAnimation, stagger } from "motion/react";
 import { TbPointFilled } from "react-icons/tb";
+
 const Featured = () => {
+  const cards = [
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation()
+  ];
+  const scale = [
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation()
+  ];
+  const handleHover = (index) => {
+    cards[index].start({
+      y: "0",
+    });
+    scale[index].start({
+      scale: 0.8,
+    });
+  };
+  const handleHoverEnd = (index) => {
+    cards[index].start({
+      y: "100%",
+    });
+  };
+
+  const images = [
+    "/images/Salience.png",
+    "/images/CS_Website.png",
+    "/images/Frame.png",
+    "/images/Fyde.png",
+  ];
+
   return (
-    <div className="w-full py-20 bg-gray-100 z-[9] relative">
-      <div className="w-full">
+    <div className="w-full py-20 pb-40 bg-gray-100 z-[9] relative">
+      <div className="w-full relative">
         <h1 className="text-6xl border-b-1 pb-12 px-15 border-zinc-400 font-[NeueMonstreal] tracking-tight ">
           Featured projects
         </h1>
       </div>
-      <div className="cards mt-10 px-15 flex gap-10">
-        <div className="card-container w-1/2 h-[70vh]">
-          <div className="top flex items-center justify-start gap-3">
-            <TbPointFilled className="text-xl" />
-            <span className="uppercase inline-block font-[NeueMonstreal] text-sm">
-              Salience Labs
-            </span>
+      <div className="cards px-15 mt-10  flex flex-wrap gap-4">
+        {[
+          "Salience Labs",
+          "Cardboard Spaceship",
+          "AH2 & Matt Horn",
+          "Fyde",
+        ].map((text, idx) => (
+          <div className="card-container relative w-[48%] my-6 h-[80vh]">
+            <div className="top flex items-center justify-start gap-3 mb-4">
+              <TbPointFilled className="text-xl" />
+              <span className="uppercase inline-block font-[NeueMonstreal] text-sm">
+                {text}
+              </span>
+            </div>
+            <h1
+              className={`absolute pointer-events-none ${
+                idx % 2 === 0
+                  ? "right-1  translate-x-1/2"
+                  : "left-1 -translate-x-1/2"
+              } z-[9] flex -translate-y-1/2 overflow-hidden top-1/2`}
+            >
+              {text.split("").map((item, index) => (
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={cards[idx]}
+                  transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.02 }}
+                  className="inline-block whitespace-pre font-[FoundersGrotesk] text-9xl text-[#CDEA68] uppercase"
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </h1>
+            <motion.div
+              onHoverStart={() => handleHover(idx)}
+              onHoverEnd={() => handleHoverEnd(idx)}
+              className="card overflow-hidden w-full rounded-2xl h-[90%] bg-blue-400"
+            >
+              <img src={images[idx]} alt="" />
+            </motion.div>
+            <div className="bottom mt-4 flex gap-4">
+              <button className="uppercase opacity-90 px-2 text-sm py-1 border-1 rounded-full">
+                Brand identity
+              </button>
+              <button className="uppercase opacity-90 px-2 text-sm py-1 border-1 rounded-full">
+                Pitch deck
+              </button>
+            </div>
           </div>
-          <div className="card w-full rounded-2xl h-full bg-blue-400"></div>
-        </div>
-        <div className="card-container w-1/2 h-[70vh]">
-        <div className="top flex items-center justify-start gap-3">
-          <TbPointFilled className="text-xl"/>
-          <span className="uppercase inline-block font-[NeueMonstreal] text-sm">Cardboard Spaceship</span>
-        </div>
-          <div className="card w-full rounded-2xl h-full bg-blue-400"></div>
-        </div>
+        ))}
       </div>
+      <button className="absolute uppercase flex gap-5 items-center px-8 py-4 bg-black opacity-90 left-1/2 -translate-x-1/2 text-white rounded-full text-sm bottom-5">
+        View all case studies
+        <span className="inline-block h-2 w-2 rounded-full bg-white"></span>
+      </button>
     </div>
   );
 };

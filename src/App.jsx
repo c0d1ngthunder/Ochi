@@ -12,8 +12,10 @@ const App = () => {
     <div className="w-full h-screen">
       <Navbar />
       <LandingPage />
-      <Marquee />
-      <About />
+      <div className="parallax  z-50 relative" data-scroll data-scroll-section data-scroll-speed=".3">
+        <Marquee />
+        <About />
+      </div>
       <Eyes />
       <Featured />
     </div>

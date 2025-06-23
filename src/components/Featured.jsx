@@ -6,25 +6,40 @@ const Featured = () => {
     useAnimation(),
     useAnimation(),
     useAnimation(),
-    useAnimation()
+    useAnimation(),
   ];
   const scale = [
     useAnimation(),
     useAnimation(),
     useAnimation(),
-    useAnimation()
+    useAnimation(),
+  ];
+  const imgscale = [
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
   ];
   const handleHover = (index) => {
     cards[index].start({
       y: "0",
     });
     scale[index].start({
-      scale: 0.8,
+      scale: 0.96,
+    });
+    imgscale[index].start({
+      scale: 1.1,
     });
   };
   const handleHoverEnd = (index) => {
     cards[index].start({
       y: "100%",
+    });
+    scale[index].start({
+      scale: 1,
+    });
+    imgscale[index].start({
+      scale: 1,
     });
   };
 
@@ -77,9 +92,16 @@ const Featured = () => {
             <motion.div
               onHoverStart={() => handleHover(idx)}
               onHoverEnd={() => handleHoverEnd(idx)}
-              className="card overflow-hidden w-full rounded-2xl h-[90%] bg-blue-400"
+              className="w-full h-[90%]"
             >
-              <img src={images[idx]} alt="" />
+              <motion.div
+                initial={{ scale: 1 }}
+                animate={scale[idx]}
+                transition={{ ease: "linear", duration: 0.3 }}
+                className="card overflow-hidden w-full rounded-2xl h-full bg-cover"
+              >
+                <motion.img initial={{scale:1}} animate={imgscale[idx]} transition={{ease:"linear"}} className="w-full h-full" src={images[idx]} alt="" />
+              </motion.div>
             </motion.div>
             <div className="bottom mt-4 flex gap-4">
               <button className="uppercase opacity-90 px-2 text-sm py-1 border-1 rounded-full">

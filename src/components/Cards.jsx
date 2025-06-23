@@ -12,11 +12,11 @@ const Cards = () => {
       <div className="w-1/2 flex gap-4">
         <div className="w-1/2 h-[60vh] flex items-center justify-center relative bg-[#212121] rounded-lg">
           <img className="w-1/2" src="/images/logo002.svg" alt="" />
-          <a className="uppercase backdrop-opacity-90 absolute font-[NeueMonstreal] text-sm bottom-5 left-5 text-gray-100 px-2 py-1 border-1 border-gray-100 rounded-full">Rating 5.0 on clutch</a>
+          <a className="uppercase opacity-90 absolute font-[NeueMonstreal] text-sm bottom-5 left-5 text-gray-100 px-2 py-1 border-1 border-gray-100 rounded-full">Rating 5.0 on clutch</a>
         </div>
         <div className="w-1/2 h-[60vh] flex items-center justify-center relative bg-[#212121] rounded-lg">
           <img className="w-1/3" src="/images/logo003.png" alt="" />
-          <a className="uppercase backdrop-opacity-90 absolute font-[NeueMonstreal] text-sm bottom-5 left-5 text-gray-100 px-2 py-1 border-1 border-gray-100 rounded-full">Business bootcamp alumini</a>
+          <a className="uppercase opacity-90 absolute font-[NeueMonstreal] text-sm bottom-5 left-5 text-gray-100 px-2 py-1 border-1 border-gray-100 rounded-full">Business bootcamp alumini</a>
         </div>
       </div>
     </div>

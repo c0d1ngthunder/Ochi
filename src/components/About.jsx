@@ -9,7 +9,7 @@ const About = () => {
       <div className="flex text-lg border-t-1 w-full pr-[10vw] justify-between border-[#a5b95a] px-15 py-5 mt-10">
         <div>What you can expect:</div>
         <div className="w-1/2 flex justify-between">
-          <div className="w-1/2 flex flex-col gap-[2vw]">
+          <div className="w-1/2 font-[NeueMonstreal] flex flex-col gap-[2vw]">
             <p>
               We create tailored presentations to help you persuade your
               colleagues, clients, or investors. Whether it's live or digital,

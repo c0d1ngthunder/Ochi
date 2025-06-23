@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Eyes from "./components/Eyes";
 import Featured from "./components/Featured";
 import LocomotiveScroll from "locomotive-scroll";
+import Cards from "./components/Cards";
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
@@ -18,6 +19,7 @@ const App = () => {
       </div>
       <Eyes />
       <Featured />
+      <Cards />
     </div>
   );
 };

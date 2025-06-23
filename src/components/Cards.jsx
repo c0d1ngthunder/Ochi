@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = () => {
   return (
-    <div className="w-full h-screen bg-gray-100 items-center flex gap-4 px-15">
+    <div data-scroll data-scroll-speed="-.4" className="w-full h-screen bg-gray-100 items-center flex gap-4 px-15">
       <div className="w-1/2 relative h-[60vh] bg-[#004D43] rounded-xl flex items-center justify-center">
         <img className="w-1/4" src="/images/logo.svg" alt="" />
         <span className="text-sm backdrop-opacity-90 absolute font-[NeueMonstreal] bottom-5 left-5 text-[#CDEA68] px-2 py-1 border-1 border-[#CDEA68] rounded-full">

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed=".3" className="flex -translate-y-[10%] px-15 py-8 rounded-tl-3xl rounded-tr-3xl bg-gray-100 w-full min-h-screen">
+    <div data-scroll data-scroll-section data-scroll-speed=".3" className="flex -translate-y-[10%] overflow-hidden px-15 pt-8 rounded-tl-3xl rounded-tr-3xl bg-gray-100 w-full min-h-screen">
       <div className="left w-1/2 flex flex-col justify-between">
         <div className="top">
           <h1 className="text-[9vw] opacity-85 leading-[7vw] uppercase font-[FoundersGrotesk]">

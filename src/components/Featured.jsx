@@ -44,10 +44,10 @@ const Featured = () => {
   };
 
   const images = [
-    "/images/Salience.png",
-    "/images/CS_Website.png",
-    "/images/Frame.png",
-    "/images/Fyde.png",
+    "./images/Salience.png",
+    "./images/CS_Website.png",
+    "./images/Frame.png",
+    "./images/Fyde.png",
   ];
 
   return (

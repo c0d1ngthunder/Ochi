@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="w-full h-screen">
+    <div className="w-full min-h-screen bg-gray-100">
       <Navbar />
       <LandingPage />
       <div className="parallax  z-50 relative" data-scroll data-scroll-section data-scroll-speed=".3">

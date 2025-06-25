@@ -9,3 +9,7 @@
     font-family: NeueMonstreal;
     src: url("/fonts/NeueMontreal-Regular.woff2");
 }
+
+[data-scroll-container] {
+  overflow: hidden !important;
+}

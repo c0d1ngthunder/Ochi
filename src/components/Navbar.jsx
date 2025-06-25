@@ -1,6 +1,8 @@
+import { motion } from "motion/react";
+
 const Navbar = () => {
   return (
-    <div className="w-full opacity-[0.85] fixed z-[999]  px-15 flex font-['NeueMonstreal'] justify-between py-6">
+    <motion.div animate={{opacity:.85}} transition={{duration:1,delay:3.5}} className="w-full opacity-0 fixed z-[999]  px-15 flex font-['NeueMonstreal'] justify-between py-6">
       <div className="logo">
         <svg
           width="72"
@@ -34,7 +36,7 @@ const Navbar = () => {
       <div className="links flex  gap-10 ">
         {["Services","Our work","About us","Insights","Contact us"].map((link,index)=><a className={`${index===4 && "ml-40"}`} key={index} >{link}</a>)}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

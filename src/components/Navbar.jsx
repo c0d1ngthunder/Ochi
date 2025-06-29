@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Link from "./link";
 
 const Navbar = () => {
   return (
@@ -33,8 +34,8 @@ const Navbar = () => {
           ></path>
         </svg>
       </div>
-      <div className="links flex  gap-10 ">
-        {["Services","Our work","About us","Insights","Contact us"].map((link,index)=><a className={`${index===4 && "ml-40"}`} key={index} >{link}</a>)}
+      <div className="links md:flex hidden gap-10 ">
+        {["Services","Our work","About us","Insights","Contact us"].map((link,index)=><Link key={index} title={link} index={index} />)}
       </div>
     </motion.div>
   );

@@ -1,6 +1,9 @@
-import { motion, useAnimation, stagger } from "motion/react";
+import { gsap } from "gsap";
+import { motion, useAnimation } from "motion/react";
+import { option } from "motion/react-client";
+import { PiArrowDownLeftThin } from "react-icons/pi";
 import { TbPointFilled } from "react-icons/tb";
-
+import Button from "./Button"
 const Featured = () => {
   const cards = [
     useAnimation(),
@@ -50,8 +53,30 @@ const Featured = () => {
     "./images/Fyde.png",
   ];
 
+  const btnAnimation = (e, yoff, txtcolor) => {
+    const btn = e.currentTarget;
+
+    let options = {
+      y: yoff,
+      duration: 0.3,
+    };
+    if (txtcolor == "black") {
+      options.onComplete = () => {
+        gsap.set(btn.querySelector(".coloranime"), {
+          y: "0%",
+        });
+      };
+    }
+
+    gsap.to(btn.querySelector(".coloranime"), { ...options });
+    gsap.to(btn.querySelector(".txt"), {
+      color: txtcolor,
+      duration: 0.3,
+    });
+  };
+
   return (
-    <div className="w-full py-20 pb-40 bg-gray-100 z-[9] relative">
+    <div className="w-full py-20 bg-gray-100 z-[9] relative">
       <div className="w-full relative">
         <h1 className="text-6xl border-b-1 pb-12 px-15 border-zinc-400 font-[NeueMonstreal] tracking-tight ">
           Featured projects
@@ -100,24 +125,42 @@ const Featured = () => {
                 transition={{ ease: "linear", duration: 0.3 }}
                 className="card overflow-hidden w-full rounded-2xl h-full bg-cover"
               >
-                <motion.img initial={{scale:1}} animate={imgscale[idx]} transition={{ease:"linear"}} className="w-full h-full" src={images[idx]} alt="" />
+                <motion.img
+                  initial={{ scale: 1 }}
+                  animate={imgscale[idx]}
+                  transition={{ ease: "linear" }}
+                  className="w-full h-full"
+                  src={images[idx]}
+                  alt=""
+                />
               </motion.div>
             </motion.div>
             <div className="bottom mt-4 flex gap-4">
-              <button className="uppercase opacity-90 px-2 text-sm py-1 border-1 rounded-full">
-                Brand identity
+              <button
+                onMouseEnter={(e) => btnAnimation(e, "-80%", "white")}
+                onMouseLeave={(e) => btnAnimation(e, "-150%", "black")}
+                className="uppercase overflow-hidden relative px-2 text-sm py-1 border-1 rounded-full"
+              >
+                <div className="txt opacity-90 relative z-[99]">
+                  Brand identity
+                </div>
+                <div className="coloranime absolute rounded-[50%] -left-3 top-8 h-15 w-35 bg-black z-9"></div>
               </button>
-              <button className="uppercase opacity-90 px-2 text-sm py-1 border-1 rounded-full">
-                Pitch deck
+              <button
+                onMouseEnter={(e) => btnAnimation(e, "-80%", "white")}
+                onMouseLeave={(e) => btnAnimation(e, "-150%", "black")}
+                className="uppercase overflow-hidden relative px-2 text-sm py-1 border-1 rounded-full"
+              >
+                <div className="txt opacity-90 relative z-[99]">Pitch deck</div>
+                <div className="coloranime absolute rounded-[50%] -left-3 top-8 h-15 w-35 bg-black z-9"></div>
               </button>
             </div>
           </div>
         ))}
       </div>
-      <button className="absolute uppercase flex gap-5 items-center px-8 py-4 bg-black opacity-90 left-1/2 -translate-x-1/2 text-white rounded-full text-sm bottom-5">
-        View all case studies
-        <span className="inline-block h-2 w-2 rounded-full bg-white"></span>
-      </button>
+      <div className="w-full flex justify-center items-center pt-20">
+      <Button txt="View more" />
+      </div>
     </div>
   );
 };

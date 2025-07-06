@@ -2,7 +2,7 @@ import { motion, useAnimation } from "motion/react";
 import React from "react";
 import { PiArrowDownLeftThin } from "react-icons/pi";
 
-const Button = ({txt}) => {
+const Button = ({txt,animator}) => {
   let anime = [
     useAnimation(),
     useAnimation(),
@@ -21,17 +21,25 @@ const Button = ({txt}) => {
         anime[2].start({ opacity: 1 });
         anime[3].start({ scale: 0.98 });
         anime[4].start({ scale: 1.1 });
+        if (animator){
+          animator[0].start({ scale: 0.98})
+          animator[1].start({scale:1.1})
+        }
       }}
       onHoverEnd={async () => {
         anime[1].start({ scale: 1 });
         anime[2].start({ opacity: 0 });
         anime[3].start({ scale: 1 });
         anime[4].start({ scale: 1 });
+        if(animator){
+          animator[0].start({scale:1})
+          animator[1].start({scale:1})
+        }
         await anime[0].start({ y: "-100%" }, { duration: 0.2, ease: "linear" });
-        await anime[0].start({ opacity: "0" });
+        await anime[0].start({ opacity: 0 });
 
         await anime[0].start({ y: "100%" });
-        await anime[0].start({ opacity: "1" });
+        await anime[0].start({ opacity: 1 });
       }}
     >
       <div className="z-[99] relative">{txt}</div>
@@ -51,7 +59,7 @@ const Button = ({txt}) => {
         }}
       >
         <MotionArrow
-          className="rotate-180 text-[.4vw] font-extrabold text-black opacity-0"
+          className="rotate-180 text-xl font-extrabold text-black opacity-0"
           animate={anime[2]}
         />
       </motion.div>

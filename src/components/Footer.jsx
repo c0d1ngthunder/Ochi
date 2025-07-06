@@ -2,9 +2,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed=".3" className="flex -translate-y-[10%] overflow-hidden px-15 pt-8 rounded-tl-3xl rounded-tr-3xl bg-gray-100 w-full min-h-screen">
-      <div className="left w-1/2 flex flex-col justify-between">
-        <div className="top">
+    <div
+      data-scroll
+      data-scroll-section
+      data-scroll-speed=".3"
+      className="flex flex-col -translate-y-[10%] overflow-hidden px-15 pt-8 rounded-tl-3xl rounded-tr-3xl bg-gray-100 w-full min-h-screen"
+    >
+      <div className="top my-8 flex flex-col sm:justify-between w-full">
+        <div className="left">
           <h1 className="text-[9vw] opacity-85 leading-[7vw] uppercase font-[FoundersGrotesk]">
             eye-
           </h1>
@@ -12,6 +17,37 @@ const Footer = () => {
             opening
           </h1>
         </div>
+
+        <div className="uppercase font-[FoundersGrotesk] text-[9vw] leading-[7vw] opacity-85">
+          presentations
+        </div>
+      </div>
+      <div className="right w-1/2 flex flex-col justify-between">
+        <div className="font-[NeueMonstreal] opacity-90">
+          <div className="flex flex-col">
+            <p className="mb-[1vw]">S:</p>
+            <a href="">Instagram</a>
+            <a href="">Behance</a>
+            <a href="">Facebook</a>
+            <a href="">Linkedin</a>
+          </div>
+          <div className="flex flex-col">
+            <p className="my-[1vw]">L:</p>
+            <p>202-1965 W 4th Ave</p>
+            <p> Vancouver, Canada</p>
+            <div className="my-[1vw]">
+              <p>30 Chukarina St</p>
+              <p>Lviv, Ukraine</p>
+            </div>
+          </div>
+          <div className="flex flex-col mb-[4vw]">
+            <p className="mb-[1vw]">E:</p>
+            <p>hello@ochi.design</p>
+          </div>
+        </div>
+      </div>
+      <div className="bottom gap-10 flex flex-col sm:flex-row sm:justify-between w-full">
+        <div className="left">
         <svg
           width="72"
           height="30"
@@ -41,34 +77,8 @@ const Footer = () => {
             fill="currentColor"
           ></path>
         </svg>
-      </div>
-      <div className="right w-1/2 flex flex-col justify-between">
-        <div className="top uppercase font-[FoundersGrotesk] text-[9vw] opacity-90">
-          presentations
         </div>
-        <div className="font-[NeueMonstreal] opacity-90">
-          <div className="flex flex-col">
-            <p className="mb-[1vw]">S:</p>
-            <a href="">Instagram</a>
-            <a href="">Behance</a>
-            <a href="">Facebook</a>
-            <a href="">Linkedin</a>
-          </div>
-          <div className="flex flex-col">
-            <p className="my-[1vw]">L:</p>
-            <p>202-1965 W 4th Ave</p>
-            <p> Vancouver, Canada</p>
-            <div className="my-[1vw]">
-              <p>30 Chukarina St</p>
-              <p>Lviv, Ukraine</p>
-            </div>
-          </div>
-          <div className="flex flex-col mb-[4vw]">
-            <p className="mb-[1vw]">E:</p>
-            <p>hello@ochi.design</p>
-          </div>
-        </div>
-        <div className="bottom opacity-40 flex justify-between">
+        <div className="right flex flex-col sm:flex-row opacity-60">
           <span>© ochi design 2025. </span>
           <span>Website by Obys</span>
         </div>

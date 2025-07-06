@@ -18,7 +18,7 @@ const Eyes = () => {
   });
 
   return (
-    <div data-scroll data-scroll-speed="-.7" className="w-full h-screen">
+    <div data-scroll data-scroll-speed="-.7" className="w-full h-[50vh] sm:h-screen">
       <div className="w-full h-full relative bg-[url('/images/Eyes-bg.jpg')] bg-cover bg-center">
         <div className="absolute top-1/2 -translate-x-[50%] -translate-y-[50%] left-1/2 flex gap-10  ">
           <div className="bg-white flex items-center justify-center w-[15vw] h-[15vw] rounded-full">
@@ -29,7 +29,7 @@ const Eyes = () => {
                 }}
                 className="line absolute top-1/2 left-1/2 w-full h-10"
               >
-                <div className="w-10 h-10 bg-white rounded-full"></div>
+                <div className="w-[2vw] h-[2vw] bg-white rounded-full"></div>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Eyes = () => {
                 }}
                 className="line absolute top-1/2 left-1/2 w-full h-10"
               >
-                <div className="w-10 h-10 bg-white rounded-full"></div>
+                <div className="w-[2vw] h-[2vw]  bg-white rounded-full"></div>
               </div>
             </div>
           </div>

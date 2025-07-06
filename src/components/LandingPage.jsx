@@ -28,7 +28,7 @@ const LandingPage = () => {
               {index === 1 && (
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: window.innerWidth < 640 ? "20vw" : "9vw"  }}
+                  animate={{ width: window.innerWidth < 640 ? "80px" : "9vw"  }}
                   transition={{ ease: [0.65, 0, 0.35, 1], delay: 4 }}
                   className="opacity-100 bg-center bg-cover bg-[url('/images/content-image01.jpg')] relative top-[1vw] h-[8vh] sm:h-[6vw] rounded-sm"
                 ></motion.div>

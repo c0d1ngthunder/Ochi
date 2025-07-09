@@ -4,7 +4,7 @@ import MenuButton from "./MenuButton";
 
 const Navbar = ({isOpen,setIsOpen}) => {
   return (
-    <motion.div animate={{opacity:1}} transition={{duration:1,delay:3.5}} className={`w-full opacity-0 fixed z-[999] px-6 md:px-15 ${isOpen ? "text-white" : "text-black"} flex font-['NeueMonstreal'] justify-between py-6`}>
+    <motion.div animate={{opacity:1}} transition={{duration:1,delay:2}} className={`w-full opacity-0 fixed z-[999] px-6 md:px-15 ${isOpen ? "text-white" : "text-black"} flex font-['NeueMonstreal'] justify-between py-6`}>
       <div className="logo">
         <svg
           width="72"

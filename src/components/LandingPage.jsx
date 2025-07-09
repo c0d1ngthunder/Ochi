@@ -6,7 +6,7 @@ import { PiArrowDownLeftThin } from "react-icons/pi";
 const LandingPage = () => {
   useEffect(() => {
     animate(0, 100, {
-      duration: 3,
+      duration: 1.5,
       onUpdate: (latest) =>
         (document.querySelector(".load").innerHTML = Math.round(latest) + "%"),
     });
@@ -51,7 +51,7 @@ const LandingPage = () => {
     <motion.div
       initial={{ scale: 0.75, borderRadius: "20px" }}
       animate={{ scale: 1, borderRadius: "0%" }}
-      transition={{ duration: 0.5, delay: 3 }}
+      transition={{ duration: 0.5, delay: 1.5 }}
       data-scroll
       data-scroll-section
       data-scroll-speed="-.6"
@@ -65,7 +65,7 @@ const LandingPage = () => {
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: window.innerWidth < 640 ? "80px" : "9vw" }}
-                  transition={{ ease: [0.65, 0, 0.35, 1], delay: 4 }}
+                  transition={{ ease: [0.65, 0, 0.35, 1], delay: 2.5 }}
                   className="opacity-100 bg-center bg-cover bg-[url('/images/content-image01.jpg')] relative top-[1vw] h-[8vh] sm:h-[6vw] rounded-sm"
                 ></motion.div>
               )}
@@ -78,14 +78,14 @@ const LandingPage = () => {
       </div>
       <motion.div
         animate={{ opacity: 0 }}
-        transition={{ duration: 0.3, delay: 3 }}
+        transition={{ duration: 0.3, delay: 1.5 }}
         className="absolute bottom-20 left-10 font-semibold"
       >
         Loading:
       </motion.div>
       <motion.div
         animate={{ opacity: 0 }}
-        transition={{ delay: 3 }}
+        transition={{ delay: 1.5 }}
         onAnimationEnd={(e) => {
           e.currentTarget;
         }}
@@ -93,7 +93,7 @@ const LandingPage = () => {
       ></motion.div>
       <motion.div
         animate={{ opacity: 1 }}
-        transition={{ delay: 3.5 }}
+        transition={{ delay: 2 }}
         className="border-t-1 mt-30 absolute bottom-5 w-full opacity-0 border-zinc-400 flex flex-col md:flex-row gap-5 justify-between md:items-center px-6 md:px-10 py-4"
       >
         {[

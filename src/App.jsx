@@ -19,12 +19,12 @@ const App = () => {
     const locomotiveScroll = new LocomotiveScroll();
   }
   return (
-    <motion.div data-scroll data-scroll-container animate={{backgroundColor:"var(--color-gray-100)"}} transition={{delay:3.5,duration:.3}} className="w-full overflow-x-hidden min-h-screen bg-[#000000de]">
+    <motion.div data-scroll data-scroll-container animate={{backgroundColor:"var(--color-gray-100)"}} transition={{delay:2,duration:.3}} className="w-full overflow-x-hidden min-h-screen bg-[#000000de]">
       <LoadingAnime />
       <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
       <ResponsiveMenu isOpen={isOpen} />
       <LandingPage />
-      <motion.div initial={{display:"none"}} animate={{display:"block"}} transition={{duration:.3,delay:3.5}}>
+      <motion.div initial={{display:"none"}} animate={{display:"block"}} transition={{duration:.3,delay:2}}>
         <div
           className="parallax  z-50 relative"
           data-scroll

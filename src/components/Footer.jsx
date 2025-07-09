@@ -6,7 +6,7 @@ const Footer = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed=".3"
-      className="flex flex-col sm:-mb-20vw -translate-y-[10%] overflow-hidden px-15 pt-8 rounded-tl-3xl rounded-tr-3xl bg-gray-100 w-full min-h-screen"
+      className="flex flex-col sm:-mb-20 -translate-y-[10%] overflow-hidden px-15 pt-8 rounded-tl-3xl rounded-tr-3xl bg-gray-100 w-full min-h-screen"
     >
       <div className="top my-8 flex flex-col sm:justify-between w-full">
         <div className="left">

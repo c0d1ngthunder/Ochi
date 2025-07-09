@@ -29,7 +29,7 @@ const Eyes = () => {
                 }}
                 className="line absolute top-1/2 left-1/2 w-full h-10"
               >
-                <div className="w-[2vw] h-[2vw] bg-white rounded-full"></div>
+                <div className="sm:w-[2vw] sm:h-[2vw] w-[5vw] h-[5vw] bg-white rounded-full"></div>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Eyes = () => {
                 }}
                 className="line absolute top-1/2 left-1/2 w-full h-10"
               >
-                <div className="w-[2vw] h-[2vw]  bg-white rounded-full"></div>
+                <div className="sm:w-[2vw] sm:h-[2vw] w-[5vw] h-[5vw] bg-white rounded-full"></div>
               </div>
             </div>
           </div>

@@ -11,7 +11,10 @@ import { motion } from "motion/react";
 import LoadingAnime from "./components/LoadingAnime";
 
 const App = () => {
-  const locomotiveScroll = new LocomotiveScroll();
+  const isMobile = window.innerWidth < 768;
+  if (!isMobile) {
+    const locomotiveScroll = new LocomotiveScroll();
+  }
   return (
     <motion.div data-scroll data-scroll-container animate={{backgroundColor:"var(--color-gray-100)"}} transition={{delay:3.5,duration:.3}} className="w-full overflow-x-hidden min-h-screen bg-[#000000de]">
       <LoadingAnime />

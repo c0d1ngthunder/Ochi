@@ -9,16 +9,20 @@ import Cards from "./components/Cards";
 import Footer from "./components/Footer";
 import { motion } from "motion/react";
 import LoadingAnime from "./components/LoadingAnime";
+import { useState } from "react";
+import ResponsiveMenu from "./components/ResponsiveMenu";
 
 const App = () => {
   const isMobile = window.innerWidth < 768;
+  const [isOpen, setIsOpen] = useState(false);
   if (!isMobile) {
     const locomotiveScroll = new LocomotiveScroll();
   }
   return (
     <motion.div data-scroll data-scroll-container animate={{backgroundColor:"var(--color-gray-100)"}} transition={{delay:3.5,duration:.3}} className="w-full overflow-x-hidden min-h-screen bg-[#000000de]">
       <LoadingAnime />
-      <Navbar />
+      <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
+      <ResponsiveMenu isOpen={isOpen} />
       <LandingPage />
       <motion.div initial={{display:"none"}} animate={{display:"block"}} transition={{duration:.3,delay:3.5}}>
         <div
@@ -33,7 +37,7 @@ const App = () => {
         <Eyes />
         <Featured />
         <Cards />
-        <Footer />
+        <Footer />        
       </motion.div>
     </motion.div>
   );

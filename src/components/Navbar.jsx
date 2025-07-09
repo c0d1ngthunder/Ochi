@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 import Link from "./link";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import MenuButton from "./MenuButton";
 
-const Navbar = () => {
+const Navbar = ({isOpen,setIsOpen}) => {
   return (
-    <motion.div animate={{opacity:.85}} transition={{duration:1,delay:3.5}} className="w-full opacity-0 fixed z-[999] px-6 sm:px-15 flex font-['NeueMonstreal'] justify-between py-6">
+    <motion.div animate={{opacity:1}} transition={{duration:1,delay:3.5}} className={`w-full opacity-0 fixed z-[999] px-6 md:px-15 ${isOpen ? "text-white" : "text-black"} flex font-['NeueMonstreal'] justify-between py-6`}>
       <div className="logo">
         <svg
           width="72"
@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="links md:flex hidden gap-10 ">
         {["Services","Our work","About us","Insights","Contact us"].map((link,index)=><Link key={index} title={link} index={index} />)}
       </div>
-      <HiOutlineMenuAlt4 className="text-[6vw] md:hidden" />
+      <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
     </motion.div>
   );
 };
